@@ -14,12 +14,15 @@ def go_again(credit):
     random1=random.randint(0,5)
     random2=random.randint(0,5)
     random3=random.randint(0,5)
+    print(random1)
+    print(random2)
+    print(random3)
     #If all results are the same symbol
     if symbols[random1]==symbols[random2]==symbols[random3]:
         #If they are all skulls
         if symbols[random1]=="Skull":
             #Outputs the result
-            print("YOU GOT 3 SKULLS! \nWe have taken all your money!!!\n ")
+            print("YOU GOT 3 SKULLS! \nWe have taken all your money!!!\n")
             #Takes all money
             credit=credit-credit
             #Runs the menu function
@@ -54,7 +57,6 @@ def go_again(credit):
         else:
             #Outputs the result
             print("You got 2 of the same symbols!\n We added 50p!\n")
-            print("You got these symbols:\n"+symbols[random1]+"+"+symbols[random2]+"+"+symbols[random3]+"\n")
             #Adds 50p to the credit
             credit=credit+0.50
             #Runs the menu function
@@ -81,7 +83,7 @@ def start_again(credit):
         #Checks if they want to go again
         again=str(input("Would you like to go again?\n"))
         #Validation for the input
-        again=again.lower()
+        again.lower()
         #If answer was yes
         if again=="yes":
             #The game is run again
